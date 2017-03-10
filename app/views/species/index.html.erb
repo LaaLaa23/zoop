@@ -1,0 +1,8 @@
+<% @species.each do |species| %>
+  <h5><%= link_to species.common_name, species_path( species ) %> (<em><%= species.latin_name %></em>)</h5>
+
+  <% if species.images.present? %>
+    <%= cl_image_tag( species.images.first["url"] , :width=>20, :height=>20, :radius=>"10", :crop=>"fill") %>
+  <% end %>
+<% end %>
+<%= will_paginate @species %>

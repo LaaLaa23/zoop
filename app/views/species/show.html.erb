@@ -1,0 +1,32 @@
+<div class="showhead">
+  <h2><%= @species.common_name %> ( <em><%= @species.latin_name %></em> )</h2>
+</div>
+<div class="species_body">
+
+<% if @species.chordatum %>
+  <h3><%= @species.chordatum.class_name %></h3>
+<% end %>
+
+<% if @species.images %>
+  <% @species.images.each do |image| %>
+    <%= cl_image_tag(image.url)%>
+  <% end %>
+<% end %>
+
+<% if @species.biome %>
+  <h4><%= @species.biome.name %></h4>
+<% end %>
+
+  <h4>Status</h4>
+  <p><%= @species.status %></p>
+  <h4>Description</h4>
+  <p><%= @species.description %></p>
+  <h4>Habitat</h4>
+  <p><%= @species.habitat %></p>
+  <h4>Biology</h4>
+  <p><%= @species.biology %></p>
+  <h5>More Info:</h5>
+  <p>
+    <%= link_to "More info", @species.more_info %>
+  </p>
+</div>

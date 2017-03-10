@@ -1,0 +1,9 @@
+<div class="search-results">
+  <h2>Search results found for: "<%= params[:search_keywords] %>"</h2>
+  <% if @species.empty? %>
+    <p>No results found.</p>
+  <% else %>
+    <%= render :template => "species/index" %>
+  <% end %>
+
+</div>

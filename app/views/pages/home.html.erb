@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1><%= image_tag('Zoopedia.png', alt: 'brand', class: 'wide') %></h1>
+  <p><a class="btn btn-lg btn-primary" href="/species" role="button">All Species</a></p>
+</div>
+
+<div class="row">
+  <div class="col-lg-2">
+    <% @chordatum.each do |chordatum| %>
+      <h5><%= chordatum.class_name %></h5>
+      <%= cl_image_tag(chordatum.image, :width=>150, :height=>150, :radius=>"20", :crop=>"fill") if chordatum.image.present? %>
+    <% end %>
+  </div>
+</div>

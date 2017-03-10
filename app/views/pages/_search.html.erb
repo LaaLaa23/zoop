@@ -1,0 +1,6 @@
+<div class="search-form">
+    <%= form_tag(search_results_path, :method => "get") do %>
+      <%= text_field_tag :search_keywords, params[:keywords], placeholder: "search species" %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
+</div>

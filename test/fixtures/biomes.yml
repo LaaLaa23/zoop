@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: biomes
+#
+#  id          :integer          not null, primary key
+#  name        :citext
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  description: MyText
+
+two:
+  name: 
+  description: MyText

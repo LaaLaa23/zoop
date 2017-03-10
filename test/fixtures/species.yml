@@ -1,0 +1,37 @@
+# == Schema Information
+#
+# Table name: species
+#
+#  id           :integer          not null, primary key
+#  common_name  :citext
+#  latin_name   :citext
+#  description  :text
+#  status       :string
+#  habitat      :text
+#  biology      :text
+#  more_info    :text
+#  biome_id     :integer
+#  chordatum_id :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  common_name: MyText
+  latin_name: MyText
+  description: MyText
+  status: MyString
+  habitat: MyText
+  biology: MyText
+  more_info: MyText
+
+two:
+  common_name: MyText
+  latin_name: MyText
+  description: MyText
+  status: MyString
+  habitat: MyText
+  biology: MyText
+  more_info: MyText
